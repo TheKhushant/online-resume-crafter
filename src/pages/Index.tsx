@@ -7,7 +7,7 @@ import Skills from '../components/Skills';
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-cosmic-dark relative">
+    <div className="min-h-screen bg-background relative">
       <Stars />
       <NavBar />
       <Hero 

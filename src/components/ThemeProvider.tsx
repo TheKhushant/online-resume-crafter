@@ -20,6 +20,7 @@ export const useTheme = () => {
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('dark');
+  const [mounted, setMounted] = useState(false);
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {
@@ -29,18 +30,26 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
       setTheme('light');
     }
+    setMounted(true);
   }, []);
 
   // Apply theme to document
   useEffect(() => {
+    if (!mounted) return;
+    
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
     localStorage.setItem('theme', theme);
-  }, [theme]);
+  }, [theme, mounted]);
 
   const toggleTheme = () => {
     setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
   };
+
+  // Prevent flash of incorrect theme
+  if (!mounted) {
+    return <>{children}</>;
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
