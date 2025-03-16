@@ -71,7 +71,21 @@
 }
 
 .neon-text {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-cosmic-glow via-cosmic-accent to-cosmic-blue animate-neon-pulse;
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-cosmic-glow via-cosmic-accent to-cosmic-blue;
+  background-size: 200% 100%;
+  animation: gradientFlow 3s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .star {
@@ -107,3 +121,4 @@
 .card-hover {
   @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cosmic-accent/20;
 }
+

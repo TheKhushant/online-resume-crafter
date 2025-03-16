@@ -1,65 +1,64 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface Star {
+  id: number;
+  size: number;
   x: number;
   y: number;
-  size: number;
   opacity: number;
-  animationDelay: number;
+  animationDuration: number;
 }
 
 const Stars: React.FC = () => {
-  const starsRef = useRef<HTMLDivElement>(null);
+  const [stars, setStars] = useState<Star[]>([]);
 
   useEffect(() => {
-    if (!starsRef.current) return;
+    const generateStars = () => {
+      const starCount = Math.floor(window.innerWidth * window.innerHeight / 10000) + 50;
+      const newStars: Star[] = [];
 
-    // Create stars
-    const starCount = Math.min(Math.floor(window.innerWidth * 0.15), 200); // Responsive star count
-    const stars: Star[] = [];
-
-    for (let i = 0; i < starCount; i++) {
-      const star = document.createElement('div');
-      const size = Math.random() * 2.5;
-      const x = Math.random() * 100;
-      const y = Math.random() * 100;
-      const opacity = Math.random() * 0.8 + 0.2;
-      const animationDelay = Math.random() * 4 + 's';
-
-      star.className = 'star';
-      star.style.left = `${x}%`;
-      star.style.top = `${y}%`;
-      star.style.width = `${size}px`;
-      star.style.height = `${size}px`;
-      star.style.opacity = opacity.toString();
-      star.style.animationDelay = animationDelay;
-      
-      // Random twinkling animation
-      if (Math.random() > 0.7) {
-        star.classList.add('animate-twinkle');
+      for (let i = 0; i < starCount; i++) {
+        newStars.push({
+          id: i,
+          size: Math.random() * 2 + 1,
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          opacity: Math.random() * 0.7 + 0.3,
+          animationDuration: Math.random() * 8 + 2
+        });
       }
 
-      starsRef.current.appendChild(star);
-      stars.push({ x, y, size, opacity, animationDelay });
-    }
-
-    // Cleanup
-    return () => {
-      if (starsRef.current) {
-        while (starsRef.current.firstChild) {
-          starsRef.current.removeChild(starsRef.current.firstChild);
-        }
-      }
+      setStars(newStars);
     };
+
+    generateStars();
+
+    const handleResize = () => {
+      generateStars();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <div 
-      ref={starsRef} 
-      className="fixed inset-0 z-0 overflow-hidden pointer-events-none"
-      aria-hidden="true"
-    />
+    <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
+      {stars.map((star) => (
+        <div
+          key={star.id}
+          className="star animate-twinkle"
+          style={{
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            left: `${star.x}%`,
+            top: `${star.y}%`,
+            opacity: star.opacity,
+            animationDuration: `${star.animationDuration}s`
+          }}
+        />
+      ))}
+    </div>
   );
 };
 
