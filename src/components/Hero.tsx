@@ -1,35 +1,67 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 interface HeroProps {
   name: string;
   title: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ name, title }) => {
+const Hero: React.FC<HeroProps> = ({ name }) => {
   const navigate = useNavigate();
-  const [displayTitle, setDisplayTitle] = useState('');
-  const [titleIndex, setTitleIndex] = useState(0);
-  const [showCursor, setShowCursor] = useState(true);
+  const [displayText, setDisplayText] = useState('');
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+  
+  const titles = ["FULLSTACK DEVELOPER", "CODER", "GRAPHIC DESIGNER"];
+  const typingRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Typing effect for title
   useEffect(() => {
-    if (titleIndex < title.length) {
-      const timeout = setTimeout(() => {
-        setDisplayTitle(prev => prev + title[titleIndex]);
-        setTitleIndex(prev => prev + 1);
-      }, 100);
-      return () => clearTimeout(timeout);
+    // Clear any existing timeout on component unmount
+    return () => {
+      if (typingRef.current) clearTimeout(typingRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    const title = titles[currentTitleIndex];
+    
+    if (!isDeleting && displayText === title) {
+      // Pause at the end of typing
+      typingRef.current = setTimeout(() => {
+        setIsDeleting(true);
+        setTypingSpeed(50); // faster when deleting
+      }, 1500);
+    } else if (isDeleting && displayText === '') {
+      // Move to the next title
+      setIsDeleting(false);
+      setTypingSpeed(100);
+      setCurrentTitleIndex((currentTitleIndex + 1) % titles.length);
     } else {
-      // When typing is complete, blink cursor
-      const interval = setInterval(() => {
-        setShowCursor(prev => !prev);
-      }, 500);
-      return () => clearInterval(interval);
+      typingRef.current = setTimeout(() => {
+        setDisplayText(prev => {
+          if (isDeleting) {
+            return prev.slice(0, -1);
+          } else {
+            return title.slice(0, prev.length + 1);
+          }
+        });
+      }, typingSpeed);
     }
-  }, [title, titleIndex]);
+  }, [currentTitleIndex, displayText, isDeleting, titles, typingSpeed]);
+
+  const handleDownloadResume = () => {
+    // Replace with your actual resume file path
+    const resumeUrl = '/resume.pdf';
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section className="min-h-screen w-full flex items-center justify-center pt-16 relative">
@@ -57,8 +89,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
             
             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-mono mt-4">
               <span className="inline-block">I'M THE</span>{" "}
-              <span className="inline-block">{displayTitle}</span>
-              {showCursor && <span className="animate-cursor-blink">|</span>}
+              <span className="inline-block typing-effect">{displayText}</span>
             </h2>
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
@@ -75,6 +106,14 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                 className="px-6 py-3 rounded-lg glassmorphism text-white font-medium shadow-lg hover:shadow-cosmic-glow/20 transition-all duration-300 hover:-translate-y-1"
               >
                 View My Work
+              </button>
+              
+              <button 
+                onClick={handleDownloadResume}
+                className="px-6 py-3 rounded-lg bg-white/10 border border-white/20 text-white font-medium shadow-lg hover:bg-white/15 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+              >
+                Download Resume
+                <Download size={18} />
               </button>
             </div>
           </div>

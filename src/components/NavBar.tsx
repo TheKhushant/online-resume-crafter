@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,27 +47,32 @@ const NavBar: React.FC = () => {
           <TimeBasedGreeting />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex items-center">
+          {/* Theme Toggle */}
+          <ThemeToggle />
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-1 ml-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white hover:text-cosmic-accent transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-white hover:text-cosmic-accent transition-colors ml-4"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
