@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import Stars from '../components/Stars';
 import NavBar from '../components/NavBar';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
 import { toast } from 'sonner';
-import emailjs from 'emailjs-com';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,44 +13,23 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    emailjs.init("YOUR_USER_ID");
-  }, []);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      };
-
-      await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        templateParams
-      );
-
+    // Simulate form submission
+    setTimeout(() => {
       toast.success('Message sent successfully!', {
         description: 'I will get back to you as soon as possible.',
       });
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      toast.error('Failed to send message', {
-        description: 'Please try again later or contact directly via email.',
-      });
-    } finally {
       setIsSubmitting(false);
-    }
+    }, 1500);
   };
 
   const contactInfo = [
@@ -106,6 +85,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Contact Form */}
             <div className="glassmorphism rounded-xl p-6 md:p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
               
@@ -163,6 +143,7 @@ const Contact: React.FC = () => {
               </form>
             </div>
             
+            {/* Contact Information */}
             <div className="flex flex-col gap-8">
               <div className="glassmorphism rounded-xl p-6 md:p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
