@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { Code, Globe, BookOpen, Users } from 'lucide-react';
 import Stars from '../components/Stars';
 import NavBar from '../components/NavBar';
+import { Code, Globe, BookOpen, Users } from 'lucide-react';
 
-export const activitiesData = [
+const activitiesData = [
   {
     id: 1,
     title: 'Open Source Contributions',
@@ -35,14 +35,7 @@ const Activities: React.FC = () => {
   return (
     <div className="min-h-screen bg-cosmic-dark">
       <Stars />
-      <NavBar 
-        onNavigate={() => {}} 
-        journeyRef={{current: null}} 
-        certificatesRef={{current: null}} 
-        activitiesRef={{current: null}} 
-        workRef={{current: null}} 
-        contactRef={{current: null}} 
-      />
+      <NavBar />
       
       <div className="container mx-auto px-4 md:px-6 pt-24 pb-16">
         <div className="max-w-4xl mx-auto">

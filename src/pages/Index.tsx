@@ -3,25 +3,18 @@ import React from 'react';
 import Stars from '../components/Stars';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
+import Skills from '../components/Skills';
 
 const Index: React.FC = () => {
-  // This component exists for backward compatibility
-  // It's no longer used since we've moved to a single page approach
   return (
-    <div className="min-h-screen bg-cosmic-dark relative">
+    <div className="min-h-screen bg-background relative">
       <Stars />
-      <NavBar 
-        onNavigate={() => {}} 
-        journeyRef={{current: null}} 
-        certificatesRef={{current: null}} 
-        activitiesRef={{current: null}} 
-        workRef={{current: null}} 
-        contactRef={{current: null}} 
-      />
+      <NavBar />
       <Hero 
         name="Your Name" 
         title="FULLSTACK DEVELOPER"
       />
+      <Skills />
     </div>
   );
 };

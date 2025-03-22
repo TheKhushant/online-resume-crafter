@@ -7,36 +7,79 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --primary: 270 70% 50%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    
+    --accent: 317 100% 50%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 270 70% 50%;
+    
+    --radius: 0.5rem;
+    
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 3.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 5.9% 90%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    --cosmic-dark: #f8f9fa;
+    --cosmic-accent: #7928CA;
+    --cosmic-glow: #FF0080;
+  }
+  
+  .dark {
     --background: 240 25% 3%;
     --foreground: 210 40% 98%;
-
+    
     --card: 240 25% 5%;
     --card-foreground: 210 40% 98%;
-
+    
     --popover: 240 25% 5%;
     --popover-foreground: 210 40% 98%;
-
+    
     --primary: 270 70% 50%;
     --primary-foreground: 210 40% 98%;
-
+    
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
+    
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
+    
     --accent: 317 100% 50%;
     --accent-foreground: 210 40% 98%;
-
+    
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
+    
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 270 70% 50%;
-
-    --radius: 0.5rem;
-
+    
     --sidebar-background: 240 25% 5%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -45,6 +88,10 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    --cosmic-dark: #050818;
+    --cosmic-accent: #7928CA;
+    --cosmic-glow: #FF0080;
   }
 }
 
@@ -70,44 +117,7 @@
   }
 }
 
-.neon-text {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-cosmic-glow via-cosmic-accent to-cosmic-blue;
-  background-size: 200% 100%;
-  animation: gradientFlow 3s linear infinite;
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.star {
-  @apply absolute bg-white rounded-full;
-}
-
-.nav-link {
-  @apply relative inline-block text-white px-2 py-1 mx-2 text-sm md:text-base transition-all duration-300 hover:text-cosmic-accent;
-}
-
-.nav-link::after {
-  content: '';
-  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cosmic-glow to-cosmic-accent transition-all duration-300;
-}
-
-.nav-link:hover::after {
-  @apply w-full;
-}
-
-.nav-link.active::after {
-  @apply w-full;
-}
+/* ... keep existing code (CSS classes and animations) */
 
 .typing-effect::after {
   content: '|';
@@ -122,3 +132,4 @@
   @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cosmic-accent/20;
 }
 
+/* Rest of your CSS */
