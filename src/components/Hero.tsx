@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
@@ -9,7 +9,6 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ name, title }) => {
-  const navigate = useNavigate();
   const [displayTitle, setDisplayTitle] = useState('');
   const [titleIndex, setTitleIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
@@ -62,20 +61,20 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
             </h2>
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
-              <button 
-                onClick={() => navigate('/contact')}
+              <Link 
+                to="/contact"
                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-accent to-cosmic-glow text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
               >
                 Contact Me
                 <ArrowRight size={18} />
-              </button>
+              </Link>
               
-              <button 
-                onClick={() => navigate('/work')}
+              <Link 
+                to="/work"
                 className="px-6 py-3 rounded-lg glassmorphism text-white font-medium shadow-lg hover:shadow-cosmic-glow/20 transition-all duration-300 hover:-translate-y-1"
               >
                 View My Work
-              </button>
+              </Link>
             </div>
           </div>
         </div>

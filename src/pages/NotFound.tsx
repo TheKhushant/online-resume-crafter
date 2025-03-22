@@ -6,16 +6,19 @@ import NavBar from '../components/NavBar';
 import { Home } from 'lucide-react';
 
 const NotFound: React.FC = () => {
+  // Create empty refs for NavBar props
+  const emptyRef = { current: null };
+  
   return (
     <div className="min-h-screen bg-cosmic-dark flex flex-col">
       <Stars />
       <NavBar 
         onNavigate={() => {}} 
-        journeyRef={{current: null}} 
-        certificatesRef={{current: null}} 
-        activitiesRef={{current: null}} 
-        workRef={{current: null}} 
-        contactRef={{current: null}} 
+        journeyRef={emptyRef} 
+        certificatesRef={emptyRef} 
+        activitiesRef={emptyRef} 
+        workRef={emptyRef} 
+        contactRef={emptyRef} 
       />
       
       <div className="flex-grow flex items-center justify-center px-4">
