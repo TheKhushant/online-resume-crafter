@@ -1,5 +1,8 @@
+
 import React from 'react';
 import { Code, Globe, BookOpen, Users } from 'lucide-react';
+import Stars from '../components/Stars';
+import NavBar from '../components/NavBar';
 
 export const activitiesData = [
   {
@@ -32,7 +35,14 @@ const Activities: React.FC = () => {
   return (
     <div className="min-h-screen bg-cosmic-dark">
       <Stars />
-      <NavBar />
+      <NavBar 
+        onNavigate={() => {}} 
+        journeyRef={{current: null}} 
+        certificatesRef={{current: null}} 
+        activitiesRef={{current: null}} 
+        workRef={{current: null}} 
+        contactRef={{current: null}} 
+      />
       
       <div className="container mx-auto px-4 md:px-6 pt-24 pb-16">
         <div className="max-w-4xl mx-auto">

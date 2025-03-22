@@ -9,7 +9,14 @@ const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen bg-cosmic-dark flex flex-col">
       <Stars />
-      <NavBar />
+      <NavBar 
+        onNavigate={() => {}} 
+        journeyRef={{current: null}} 
+        certificatesRef={{current: null}} 
+        activitiesRef={{current: null}} 
+        workRef={{current: null}} 
+        contactRef={{current: null}} 
+      />
       
       <div className="flex-grow flex items-center justify-center px-4">
         <div className="text-center max-w-lg">
