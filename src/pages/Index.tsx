@@ -8,17 +8,25 @@ import CertificatesSection from '../components/CertificatesSection';
 import ActivitiesSection from '../components/ActivitiesSection';
 import WorkSection from '../components/WorkSection';
 import ContactSection from '../components/ContactSection';
+import SkillsSection from '../components/SkillsSection';
+import SocialIcons from '../components/SocialIcons';
 
 const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-cosmic-dark relative">
       <Stars />
       <NavBar />
-      <div id="home">
+      <div id="home" className="relative">
         <Hero 
           name="Your Name" 
           title="FULLSTACK DEVELOPER"
         />
+        <div className="absolute bottom-12 left-0 right-0 flex justify-center">
+          <SocialIcons />
+        </div>
+      </div>
+      <div id="skills">
+        <SkillsSection />
       </div>
       <div id="journey">
         <JourneySection />
