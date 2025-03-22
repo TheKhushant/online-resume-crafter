@@ -18,7 +18,7 @@ const Index: React.FC = () => {
       <NavBar />
       <div id="home" className="relative">
         <Hero 
-          name="Your Name" 
+          name="KHUSHANT WANKHEDE" 
           title="FULLSTACK DEVELOPER"
         />
         <div className="absolute bottom-12 left-0 right-0 flex justify-center">
