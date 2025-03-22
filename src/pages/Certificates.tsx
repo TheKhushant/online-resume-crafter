@@ -1,10 +1,7 @@
-
 import React from 'react';
-import Stars from '../components/Stars';
-import NavBar from '../components/NavBar';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award } from 'lucide-react';
 
-const certificatesData = [
+export const certificatesData = [
   {
     id: 1,
     title: 'Advanced React & Redux',

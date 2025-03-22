@@ -1,10 +1,7 @@
-
 import React from 'react';
-import Stars from '../components/Stars';
-import NavBar from '../components/NavBar';
 import { Calendar, Briefcase, GraduationCap, Code } from 'lucide-react';
 
-const journeyData = [
+export const journeyData = [
   {
     year: '2022 - Present',
     title: 'Senior Full Stack Developer',

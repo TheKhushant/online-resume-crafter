@@ -5,6 +5,42 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-rea
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
 
+export const contactInfo = [
+  {
+    icon: <Mail className="w-5 h-5 text-cosmic-glow" />,
+    text: 'email@example.com',
+    href: 'mailto:email@example.com'
+  },
+  {
+    icon: <Phone className="w-5 h-5 text-cosmic-glow" />,
+    text: '+1 (123) 456-7890',
+    href: 'tel:+11234567890'
+  },
+  {
+    icon: <MapPin className="w-5 h-5 text-cosmic-glow" />,
+    text: 'New York, NY, USA',
+    href: '#'
+  }
+];
+
+export const socialLinks = [
+  {
+    icon: <Github className="w-5 h-5" />,
+    href: 'https://github.com/',
+    label: 'GitHub'
+  },
+  {
+    icon: <Linkedin className="w-5 h-5" />,
+    href: 'https://linkedin.com/',
+    label: 'LinkedIn'
+  },
+  {
+    icon: <Twitter className="w-5 h-5" />,
+    href: 'https://twitter.com/',
+    label: 'Twitter'
+  }
+];
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',

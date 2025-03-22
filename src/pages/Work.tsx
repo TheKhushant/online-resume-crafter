@@ -1,10 +1,7 @@
-
 import React from 'react';
-import Stars from '../components/Stars';
-import NavBar from '../components/NavBar';
 import { Github, ExternalLink } from 'lucide-react';
 
-const projectsData = [
+export const projectsData = [
   {
     id: 1,
     title: 'E-Commerce Platform',

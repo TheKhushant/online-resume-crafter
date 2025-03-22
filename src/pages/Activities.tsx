@@ -1,10 +1,7 @@
-
 import React from 'react';
-import Stars from '../components/Stars';
-import NavBar from '../components/NavBar';
 import { Code, Globe, BookOpen, Users } from 'lucide-react';
 
-const activitiesData = [
+export const activitiesData = [
   {
     id: 1,
     title: 'Open Source Contributions',
