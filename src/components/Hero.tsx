@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 interface HeroProps {
   name: string;
@@ -8,26 +8,46 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ name, title }) => {
+  const titles = ["FULLSTACK DEVELOPER", "CODER", "GRAPHIC DESIGNER"];
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [displayTitle, setDisplayTitle] = useState('');
-  const [titleIndex, setTitleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
 
-  // Typing effect for title
+  // Typewriter effect logic
   useEffect(() => {
-    if (titleIndex < title.length) {
-      const timeout = setTimeout(() => {
-        setDisplayTitle(prev => prev + title[titleIndex]);
-        setTitleIndex(prev => prev + 1);
-      }, 100);
-      return () => clearTimeout(timeout);
-    } else {
-      // When typing is complete, blink cursor
-      const interval = setInterval(() => {
-        setShowCursor(prev => !prev);
-      }, 500);
-      return () => clearInterval(interval);
-    }
-  }, [title, titleIndex]);
+    const currentTitle = titles[currentTitleIndex];
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Adding characters
+        if (displayTitle.length < currentTitle.length) {
+          setDisplayTitle(currentTitle.substring(0, displayTitle.length + 1));
+        } else {
+          // Wait a bit before starting to delete
+          setTimeout(() => setIsDeleting(true), 1500);
+        }
+      } else {
+        // Removing characters
+        if (displayTitle.length > 0) {
+          setDisplayTitle(displayTitle.substring(0, displayTitle.length - 1));
+        } else {
+          setIsDeleting(false);
+          setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+        }
+      }
+    }, isDeleting ? 50 : 100); // Faster deletion, slower typing
+    
+    return () => clearTimeout(timeout);
+  }, [displayTitle, isDeleting, currentTitleIndex, titles]);
+
+  // Blinking cursor
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -84,6 +104,15 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
               >
                 View My Work
               </button>
+              
+              <a 
+                href="/resume.pdf" 
+                download="my-resume.pdf"
+                className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg shadow-cosmic-blue/20 hover:shadow-cosmic-blue/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+              >
+                Download CV
+                <Download size={18} />
+              </a>
             </div>
           </div>
         </div>
