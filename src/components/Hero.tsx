@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
@@ -9,7 +8,6 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ name, title }) => {
-  const navigate = useNavigate();
   const [displayTitle, setDisplayTitle] = useState('');
   const [titleIndex, setTitleIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
@@ -30,6 +28,16 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
       return () => clearInterval(interval);
     }
   }, [title, titleIndex]);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <section className="min-h-screen w-full flex items-center justify-center pt-16 relative">
@@ -63,7 +71,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
               <button 
-                onClick={() => navigate('/contact')}
+                onClick={() => scrollToSection('contact')}
                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-accent to-cosmic-glow text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
               >
                 Contact Me
@@ -71,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
               </button>
               
               <button 
-                onClick={() => navigate('/work')}
+                onClick={() => scrollToSection('work')}
                 className="px-6 py-3 rounded-lg glassmorphism text-white font-medium shadow-lg hover:shadow-cosmic-glow/20 transition-all duration-300 hover:-translate-y-1"
               >
                 View My Work
