@@ -65,34 +65,25 @@ const Stars: React.FC = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
-      {stars.map((star) => (
-        <div
-          key={star.id}
-          className="star absolute rounded-full bg-white"
-          style={{
-            width: `${star.size}px`,
-            height: `${star.size}px`,
-            left: `${star.x}%`,
-            top: `${star.y}%`,
-            opacity: star.opacity,
-            animation: `twinkle ${star.twinkleDuration}s ease-in-out infinite, 
-                        move ${star.moveDuration}s ease-in-out infinite alternate`
-          }}
-        />
-      ))}
-
-      <style jsx>{`
-        @keyframes twinkle {
-          0% { opacity: ${Math.random() * 0.3 + 0.2}; }
-          50% { opacity: 1; }
-          100% { opacity: ${Math.random() * 0.3 + 0.2}; }
-        }
+      {stars.map((star) => {
+        // Inline styles for each star's animation
+        const starStyle = {
+          width: `${star.size}px`,
+          height: `${star.size}px`,
+          left: `${star.x}%`,
+          top: `${star.y}%`,
+          opacity: star.opacity,
+          animation: `twinkle ${star.twinkleDuration}s ease-in-out infinite, move-${star.moveDirection} ${star.moveDuration}s ease-in-out infinite alternate`
+        };
         
-        @keyframes move {
-          0% { transform: translate(0, 0); }
-          100% { transform: ${getMovementAnimation(Math.floor(Math.random() * 8) + 1)}; }
-        }
-      `}</style>
+        return (
+          <div
+            key={star.id}
+            className="star absolute rounded-full bg-white"
+            style={starStyle}
+          />
+        );
+      })}
     </div>
   );
 };
