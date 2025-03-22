@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 import Stars from '../components/Stars';
 import NavBar from '../components/NavBar';
 import { Home } from 'lucide-react';
+import { ThemeProvider } from '../components/ThemeProvider';
 
 const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen bg-cosmic-dark flex flex-col">
       <Stars />
-      <NavBar />
+      <ThemeProvider>
+        <NavBar />
+      </ThemeProvider>
       
       <div className="flex-grow flex items-center justify-center px-4">
         <div className="text-center max-w-lg">
