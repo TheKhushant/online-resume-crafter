@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                         <div className="relative">
                             <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-xl overflow-hidden border-2 border-white border-opacity-20 shadow-xl animate-float">
                                 <img
-                                    src="/lovable-uploads/335aaa96-cef9-437b-9275-2e323285a074.png"
+                                    src="/lovable-uploads/portwBG.png"
                                     alt="Profile"
                                     className="w-full h-full object-cover"
                                 />
