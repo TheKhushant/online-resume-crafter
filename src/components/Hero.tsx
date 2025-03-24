@@ -117,7 +117,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
 
                             <a
                                 href="/resume.pdf"
-                                download="my-resume.pdf"
+                                download="Khushant_Wankhede_MCA_resume.pdf"
                                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg shadow-cosmic-blue/20 hover:shadow-cosmic-blue/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
                             >
                                 Download CV
