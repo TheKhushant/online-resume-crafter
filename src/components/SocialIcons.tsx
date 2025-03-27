@@ -9,8 +9,8 @@ interface SocialIconProps {
 
 const SocialIcons: React.FC<SocialIconProps> = ({ className = '', size = 24 }) => {
   const socialLinks = [
-    { icon: <Github size={size} />, href: 'https://github.com/', label: 'GitHub' },
-    { icon: <Linkedin size={size} />, href: 'https://linkedin.com/', label: 'LinkedIn' },
+    { icon: <Github size={size} />, href: 'https://github.com/TheKhushant', label: 'GitHub' },
+    { icon: <Linkedin size={size} />, href: 'https://www.linkedin.com/in/khushant-wankhede-b3021824a/', label: 'LinkedIn' },
     { icon: <Twitter size={size} />, href: 'https://twitter.com/', label: 'Twitter' },
     { icon: <Instagram size={size} />, href: 'https://instagram.com/', label: 'Instagram' },
     { icon: <Facebook size={size} />, href: 'https://facebook.com/', label: 'Facebook' },
