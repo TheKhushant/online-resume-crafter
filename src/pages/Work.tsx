@@ -7,16 +7,16 @@ import { Github, ExternalLink } from 'lucide-react';
 const projectsData = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'Railway Employee Management System',
     description: 'A modern e-commerce solution with cart functionality, user authentication, and payment processing.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80',
-    github: '#',
+    github: '#',  
     liveDemo: '#'
   },
   {
     id: 2,
-    title: 'Task Management App',
+    title: 'Women Safty Project',
     description: 'A collaborative task management tool with real-time updates, task assignment, and progress tracking.',
     technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
     image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80',
@@ -34,7 +34,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: 'Weather Dashboard',
+    title: 'Toe India',
     description: 'A weather application providing real-time forecasts, historical data, and location-based weather information.',
     technologies: ['React', 'OpenWeatherMap API', 'Chart.js'],
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
