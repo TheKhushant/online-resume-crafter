@@ -4,6 +4,9 @@ import Stars from '../components/Stars';
 import NavBar from '../components/NavBar';
 import { Code, Globe, BookOpen, Users } from 'lucide-react';
 
+// git status
+// git fetch origin
+// git pull origin main
 const activitiesData = [
   {
     id: 1,

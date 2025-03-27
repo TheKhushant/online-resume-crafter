@@ -18,7 +18,7 @@ const projectsData = [
     id: 2,
     title: 'Women Safty Project',
     description: 'A collaborative task management tool with real-time updates, task assignment, and progress tracking.',
-    technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
+    technologies: ['React', 'Tailwind CSS', 'TypeScript'],
     image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80',
     github: '#',
     liveDemo: '#'
