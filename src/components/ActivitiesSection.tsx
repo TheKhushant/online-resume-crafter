@@ -17,8 +17,8 @@ const activitiesData = [
   },
   {
     id: 3,
-    title: 'PPt comp',
-    description: 'Writing articles and tutorials on web development, helping others learn new technologies and best practices.',
+    title: 'PPT Comptiation',
+    description: 'Inter Collage PPT competation, Leading Team, Won 2nd prize.',
     icon: <BookOpen className="w-12 h-12 text-cosmic-glow" />,
   },
   {
