@@ -17,7 +17,7 @@ const activitiesData = [
   },
   {
     id: 3,
-    title: 'Technical Blog Writing',
+    title: 'PPt comp',
     description: 'Writing articles and tutorials on web development, helping others learn new technologies and best practices.',
     icon: <BookOpen className="w-12 h-12 text-cosmic-glow" />,
   },
