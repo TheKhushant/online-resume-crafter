@@ -116,13 +116,26 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                             </button>
 
                             <a
-                                href="/resume.pdf"
-                                download="Khushant_Wankhede_MCA_resume.pdf"
+                            href="https://drive.google.com/uc?export=download&id=1DA_Ef6EA59mE5afXVK7scaxHAj4FFQEe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg hover:shadow-lg transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+                        >
+                            Download CV 
+                            <br/>
+                            (Google Drive)
+                            <Download size={18} />
+                        </a>
+
+
+                            {/* <a
+                                href="/Khushant_Wankhede_resume.pdf"
+                                download="Khushant_Wankhede_resume.pdf"
                                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg shadow-cosmic-blue/20 hover:shadow-cosmic-blue/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
                             >
                                 Download CV
                                 <Download size={18} />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>

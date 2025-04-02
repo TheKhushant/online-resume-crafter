@@ -3,34 +3,49 @@ import React from 'react';
 import { Calendar, Briefcase, GraduationCap, Code } from 'lucide-react';
 
 const journeyData = [
-  {
-    year: '2022 - Present',
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Innovations Inc.',
-    description: 'Leading development of enterprise applications using React, Node.js, and AWS.',
-    icon: <Briefcase className="w-6 h-6 text-cosmic-accent" />
-  },
-  {
-    year: '2020 - 2022',
-    title: 'Frontend Developer',
-    company: 'Digital Solutions Ltd.',
-    description: 'Developed responsive web applications using React and TypeScript.',
-    icon: <Code className="w-6 h-6 text-cosmic-accent" />
-  },
-  {
-    year: '2018 - 2020',
-    title: 'Junior Developer',
-    company: 'StartUp Tech',
-    description: 'Worked on various web development projects using JavaScript and PHP.',
-    icon: <Code className="w-6 h-6 text-cosmic-accent" />
-  },
-  {
-    year: '2014 - 2018',
-    title: 'BSc Computer Science',
-    company: 'University of Technology',
-    description: 'Graduated with honors, specializing in software engineering.',
-    icon: <GraduationCap className="w-6 h-6 text-cosmic-accent" />
-  }
+    {
+      year: '2024 - Present',
+      title: 'MCA (AI/ML)',
+      company: 'Shree Ramdeobaba University',
+      description: '95.66 MCA-CET Score | AI & ML Specialization | Smart India Hackathon Finalist | GFG ICPC 2.0 Participant | Developed Women Safety Web App & AI-Powered Notes Sharing System | Skills: C++, Java, React.js, DSA, Problem-Solving, Leadership',
+      icon: <Briefcase className="w-6 h-6 text-cosmic-accent" />
+    },
+    {
+      year: '2024',
+      title: 'Frontend Developer Intern',
+      company: 'HNK Securities Pvt. Ltd.',
+      description: 'Developed a responsive dashboard using React.js | Enhanced UI/UX with modern design principles | Tools: CorelDRAW, Photoshop, Figma | Improved accessibility & performance',
+      icon: <Briefcase className="w-6 h-6 text-cosmic-accent" />
+    },
+    {
+      year: '2021 - 2024',
+      title: 'BCCA',
+      company: 'Kamla Nehru Mahavidyalaya',
+      description: 'RTMNU | CGPA: 6.9 | Led & Organized PPT Competition 2023 | Participated in KDK Coding Competitions | Skills: JavaScript, Web Development, Git, HTML/CSS, SQL, Linux, Team Collaboration',
+      icon: <Code className="w-6 h-6 text-cosmic-accent" />
+    },
+    {
+      year: '2021',
+      title: 'Cybersecurity Certification',
+      company: 'Coursera (Microsoft)',
+      description: 'Completed with 90% | Hands-on experience with security tools & threat analysis | Developed security-focused mini-projects',
+      icon: <Code className="w-6 h-6 text-cosmic-accent" />
+    },
+    {
+      year: '2019 - 2021',
+      title: 'HSC (Science)',
+      company: 'Dr. Vasantrao Naik Government College',
+      description: 'Percentage: 74.5% | Science Stream | Developed a Java-based Library Management System as a school project | Gained foundational programming & database skills',
+      icon: <Code className="w-6 h-6 text-cosmic-accent" />
+    },
+    {
+      year: '2019',
+      title: 'SSC',
+      company: 'Priyadarshani Convent',
+      description: 'Percentage: 63.5% | Represented school in Priyadarshani Bhagwati College Science Exhibition | Built a working model for environmental awareness',
+      icon: <GraduationCap className="w-6 h-6 text-cosmic-accent" />
+    }
+  
 ];
 
 const JourneySection: React.FC = () => {
