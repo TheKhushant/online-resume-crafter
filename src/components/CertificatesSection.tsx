@@ -5,36 +5,36 @@ import { Award, ExternalLink } from 'lucide-react';
 const certificatesData = [
   {
     id: 1,
-    title: 'Advanced React & Redux',
-    issuer: 'Udemy',
+    title: 'UI/UX Design Certification',
+    issuer: 'Coursera',
     date: 'May 2023',
-    description: 'In-depth training on advanced React patterns, Redux architecture, and performance optimization techniques.',
+    description: 'Comprehensive training on user interface and experience design, focusing on wireframing, prototyping, and usability testing.',
     link: '#'
-  },
-  {
+},
+{
     id: 2,
-    title: 'AWS Certified Developer',
-    issuer: 'Amazon Web Services',
+    title: 'Cybersecurity Certification',
+    issuer: 'Microsoft, Coursera',
     date: 'January 2023',
-    description: 'Professional certification validating expertise in developing, deploying, and debugging cloud-based applications using AWS.',
+    description: 'Deep dive into network security, ethical hacking, encryption techniques, and best practices for securing applications and data.',
     link: '#'
-  },
-  {
+},
+{
     id: 3,
-    title: 'TypeScript Masterclass',
-    issuer: 'Frontend Masters',
+    title: 'Java Programming Certification',
+    issuer: 'Disha Computer Institute',
     date: 'October 2022',
-    description: 'Comprehensive course on TypeScript type systems, interfaces, generics, and advanced patterns.',
+    description: 'Hands-on course covering core Java concepts, object-oriented programming, multithreading, and database connectivity using JDBC.',
     link: '#'
-  },
-  {
+},
+{
     id: 4,
-    title: 'Fullstack Development Bootcamp',
-    issuer: 'Coding Academy',
+    title: 'Frontend Web Development',
+    issuer: 'Disha Computer Institute',
     date: 'June 2022',
-    description: 'Intensive bootcamp covering modern web development including Node.js, Express, React, and MongoDB.',
+    description: 'Practical training on HTML, CSS, JavaScript, React, and responsive web design for building modern, user-friendly websites.',
     link: '#'
-  }
+}
 ];
 
 const CertificatesSection: React.FC = () => {

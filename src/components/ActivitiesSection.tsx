@@ -17,8 +17,8 @@ const activitiesData = [
   },
   {
     id: 3,
-    title: 'PPT Comptiation',
-    description: 'Inter Collage PPT competation, Leading Team, Won 2nd prize.',
+    title: 'Intercollegiate PPT Competition',
+    description: 'Led a winning team and secured 2nd place among 50+ teams. Presented innovative ideas. Engaged effectively with judges and audience.',
     icon: <BookOpen className="w-12 h-12 text-cosmic-glow" />,
   },
   {
