@@ -7,32 +7,37 @@ const SkillsSection: React.FC = () => {
     {
       category: "Frontend",
       icon: <Globe className="w-6 h-6 text-cosmic-accent" />,
-      items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML5/CSS3"]
+      items: ["React", "TypeScript", "Tailwind CSS", "HTML5/CSS3"]
+      // "Next.js",
     },
     {
       category: "Backend",
       icon: <Database className="w-6 h-6 text-cosmic-glow" />,
-      items: ["Node.js", "Express", "Python", "MongoDB", "PostgreSQL"]
+      items: ["Python", "MongoDB"]
+      // "Node.js", "Express", , "PostgreSQL"
     },
     {
       category: "Programming",
       icon: <Code className="w-6 h-6 text-sky-400" />,
-      items: ["JavaScript", "TypeScript", "Python", "Java", "C++"]
+      items: ["JavaScript", "TypeScript", "Python", "Java", "C++", "C"]
     },
     {
       category: "Design",
       icon: <Palette className="w-6 h-6 text-purple-400" />,
-      items: ["Adobe Photoshop", "Figma", "Illustrator", "UI/UX Design"]
+      items: ["Adobe Photoshop", "Figma", "UI/UX Design", "CoralDraw"]
+      // "Illustrator",
     },
     {
       category: "Tools",
       icon: <Laptop className="w-6 h-6 text-green-400" />,
-      items: ["Git", "Docker", "AWS", "VS Code", "Jira"]
+      items: ["Git", "VS Code",,"npm"]
+      // "Docker", "AWS",, "Jira"
     },
     {
       category: "Other",
       icon: <PenTool className="w-6 h-6 text-orange-400" />,
-      items: ["Responsive Design", "SEO", "Performance Optimization", "Agile Methodology"]
+      items: ["Responsive Design",  "Performance Optimization"]
+      // "SEO",, "Agile Methodology"
     }
   ];
 
