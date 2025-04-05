@@ -44,8 +44,8 @@ const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="py-20 w-full relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-10">
+          <h2 data-scroll data-scroll-speed="2" data-scroll-class="fade-in" className="text-4xl md:text-5xl font-bold mb-4">
             My <span className="neon-text">Skills</span>
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
@@ -53,7 +53,7 @@ const SkillsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-scroll data-scroll-speed="5" data-scroll-class="fade-in" data-scroll-repeat  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skillGroup, index) => (
             <div 
               key={index} 

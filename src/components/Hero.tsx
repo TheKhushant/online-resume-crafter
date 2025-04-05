@@ -72,7 +72,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                     {/* Profile Image */}
-                    <div className="w-full lg:w-5/12 flex justify-center lg:justify-end">
+                    <div data-scroll data-scroll-speed="5" data-scroll-class="fade-in" data-scroll-repeat className="w-full lg:w-5/12 flex justify-center lg:justify-end">
                         <div className="relative">
                             <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-xl overflow-hidden border-2 border-white border-opacity-20 shadow-xl animate-float">
                                 <img
@@ -87,11 +87,11 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
 
                     {/* Text Content */}
                     <div className="w-full lg:w-7/12 text-center lg:text-left space-y-6 lg:space-y-8">
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight">
+                        <h1 data-scroll data-scroll-speed="3" className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight">
                             <span className="neon-text uppercase">{name}</span>
                         </h1>
 
-                        <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-mono mt-4">
+                        <h2 data-scroll data-scroll-speed="3" className="text-xl sm:text-2xl md:text-3xl text-white font-mono mt-4">
                             <span className="inline-block">I'M THE</span>{" "}
                             <span className="inline-block">{displayTitle}</span>
                             {showCursor && (
@@ -99,7 +99,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                             )}
                         </h2>
 
-                        <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
+                        <div data-scroll data-scroll-speed="3" className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
                             <button
                                 onClick={() => scrollToSection("contact")}
                                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-accent to-cosmic-glow text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"

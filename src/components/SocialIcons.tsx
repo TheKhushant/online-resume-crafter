@@ -18,7 +18,7 @@ const SocialIcons: React.FC<SocialIconProps> = ({ className = '', size = 24 }) =
   ];
 
   return (
-    <div className={`flex flex-wrap items-center gap-4 ${className}`}>
+    <div data-scroll data-scroll-speed="2" className={`flex flex-wrap items-center gap-4 ${className}`}>
       {socialLinks.map((social, index) => (
         <a
           key={index}
