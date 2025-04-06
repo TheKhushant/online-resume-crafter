@@ -37,7 +37,7 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 mb-10 lg:grid-cols-2 gap-8">
             <div className="glassmorphism rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
               <div className="space-y-6">
