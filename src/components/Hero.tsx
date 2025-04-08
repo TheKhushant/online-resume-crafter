@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
 
     // Typewriter effect logic
     useEffect(() => {
-        const titles = ["FULLSTACK DEVELOPER", "CODER", "GRAPHIC DESIGNER"];
+        const titles = ["FRONTEND DEVELOPER", "CODER", "GRAPHIC DESIGNER"];
         const currentTitle = titles[currentTitleIndex];
 
         const timeout = setTimeout(
