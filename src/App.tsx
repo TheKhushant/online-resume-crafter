@@ -6,12 +6,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import SmoothScrollProvider from "./components/SmoothScrollProvider";
+// import SmoothScrollProvider from "./components/SmoothScrollProvider";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <SmoothScrollProvider>
+  // <SmoothScrollProvider>
     <div data-scroll-container>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -26,7 +26,7 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
   </div>
-  </SmoothScrollProvider>
+  // </SmoothScrollProvider>
 );
 
 export default App;
