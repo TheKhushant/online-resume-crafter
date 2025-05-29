@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
 
     // Typewriter effect logic
     useEffect(() => {
-        const titles = ["FRONTEND DEVELOPER", "CODER", "GRAPHIC DESIGNER"];
+        const titles = ["PROGRAMMER", "TECH ENTHUSIAST", "CODER","STUDENT",];
         const currentTitle = titles[currentTitleIndex];
 
         const timeout = setTimeout(
@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                         <div className="relative">
                             <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-xl overflow-hidden border-2 border-white border-opacity-20 shadow-xl animate-float">
                                 <img
-                                    src="/lovable-uploads/portwBG.png"
+                                    src="/img/PNG.png"
                                     alt="Profile"
                                     className="w-full h-full object-cover"
                                 />
@@ -98,42 +98,33 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                                 <span className="animate-cursor-blink">|</span>
                             )}
                         </h2>
-
+                            {/* buttons after Typewriter */}
                         <div data-scroll data-scroll-speed="3" className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
-                            <button
-                                onClick={() => scrollToSection("contact")}
-                                className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-accent to-cosmic-glow text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
-                            >
-                                Contact Me
-                                <ArrowRight size={18} />
-                            </button>
+                            <div className="hidden md:flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
+                                <button
+                                    onClick={() => scrollToSection("contact")}
+                                    className="px-6 py-3 h-12 rounded-lg bg-gradient-to-r from-cosmic-accent to-cosmic-glow text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+                                >
+                                    Contact Me
+                                    <ArrowRight size={18} />
+                                </button>
 
-                            <button
-                                onClick={() => scrollToSection("work")}
-                                className="px-6 py-3 rounded-lg glassmorphism text-white font-medium shadow-lg hover:shadow-cosmic-glow/20 transition-all duration-300 hover:-translate-y-1"
-                            >
-                                View My Work
-                            </button>
-
+                                <button
+                                    onClick={() => scrollToSection("work")}
+                                    className="px-6 py-3 h-12 rounded-lg glassmorphism text-white font-medium shadow-lg hover:shadow-cosmic-glow/20 transition-all duration-300 hover:-translate-y-1"
+                                >
+                                    View My Work
+                                </button>
+                            </div>
                             <a
-                            href="https://drive.google.com/uc?export=download&id=1DA_Ef6EA59mE5afXVK7scaxHAj4FFQEe"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg hover:shadow-lg transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
-                        >
-                            Download CV 
-                            <Download size={18} />
-                        </a>
-
-
-                            {/* <a
-                                href="/Khushant_Wankhede_resume.pdf"
-                                download="Khushant_Wankhede_resume.pdf"
-                                className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg shadow-cosmic-blue/20 hover:shadow-cosmic-blue/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+                                href="https://drive.google.com/uc?export=download&id=1DA_Ef6EA59mE5afXVK7scaxHAj4FFQEe"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-3 h-12 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg hover:shadow-lg transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
                             >
-                                Download CV
+                                Download CV 
                                 <Download size={18} />
-                            </a> */}
+                            </a>
                         </div>
                     </div>
                 </div>
