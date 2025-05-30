@@ -12,27 +12,29 @@ interface ExperienceItem {
 const experienceData: ExperienceItem[] = [
   {
     year: "May 2024 - July 2024",
-    title: "Frontend Developer Intern",
-    company: "HNK Securities Pvt. Ltd.",
+    title: "Teaching",
+    company: "Disha Computer Institute",
     description:
-      "Worked on a responsive dashboard for stock tracking using React.js. Focused on user interface and accessibility.",
+      "At Disha Computer Institute, I taught various programming languages including C, C++, Java, and frontend technologies like HTML, CSS, Bootstrap. I also trained students in software tools such as CorelDRAW, Photoshop, and AutoCAD, helping them build strong foundations in both coding and design.",
     responsibilities: [
-      "Built reusable UI components using React and TailwindCSS",
-      "Enhanced accessibility and responsiveness",
-      "Collaborated with designers using Figma",
-      "Optimized performance and SEO",
+     "Taught C, C++, Java, and frontend technologies: HTML, CSS, Bootstrap",
+     "Trained students in software tools: CorelDRAW, Photoshop, AutoCAD",
+     "Built and deployed mini-projects to enhance practical knowledge",
+     "Conducted hands-on sessions to reinforce learning",
     ],
   },
   {
-    year: "Jan 2023 - Mar 2023",
-    title: "Web Development Intern",
-    company: "CodeCraft Club",
+    year: "Feb 2022 - Dec 2023",
+    title: "Website Developer + Video Editor",
+    company: "HNK Securities Pvt. Ltd.",
     description:
-      "Contributed to internal tools for event management and student participation tracking.",
+      "At HNK Securities Pvt. Ltd., I worked as a Website Developer and Video Editor, contributing to the company’s digital presence. My responsibilities included building responsive and reusable front-end components and editing promotional videos for digital marketing campaigns.",
     responsibilities: [
-      "Developed admin and student panel UI using HTML/CSS/JS",
-      "Integrated Firebase for authentication",
-      "Conducted usability testing and gathered feedback",
+      "Built reusable UI components using React and TailwindCSS",
+      "Developed interactive and responsive web pages",
+      "Enhanced SEO performance and loading speed",
+      "Edited promotional and training videos for company branding",
+
     ],
   },
 ];

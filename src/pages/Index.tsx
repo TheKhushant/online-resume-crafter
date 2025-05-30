@@ -10,6 +10,7 @@ import ContactSection from "../components/ContactSection";
 import SkillsSection from "../components/SkillsSection";
 import SocialIcons from "../components/SocialIcons";
 import ExperienceSection from "@/components/ExperienceSection";
+
 const Index: React.FC = () => {
     return (
         <div className="min-h-screen bg-cosmic-dark relative">
