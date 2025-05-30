@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                         className="w-full lg:w-5/12 flex justify-center lg:justify-end"
                     >
                         <div className="relative">
-                            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-xl overflow-hidden border-2 border-white border-opacity-20 shadow-xl animate-float">
+                            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-xl overflow-hidden border-opacity-20 shadow-xl animate-float">
                                 <img
                                     src="/img/PNG.png"
                                     alt="Profile"
