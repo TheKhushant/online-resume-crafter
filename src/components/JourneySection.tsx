@@ -10,13 +10,13 @@ const journeyData = [
       description: '95.66 MCA-CET Score | AI & ML Specialization | Smart India Hackathon Finalist | GFG ICPC 2.0 Participant | Developed Women Safety Web App & AI-Powered Notes Sharing System | Skills: C++, Java, React.js, DSA, Problem-Solving, Leadership',
       icon: <Briefcase className="w-6 h-6 text-cosmic-accent" />
     },
-    {
-      year: '2024',
-      title: 'Frontend Developer Intern',
-      company: 'HNK Securities Pvt. Ltd.',
-      description: 'Developed a responsive dashboard using React.js | Enhanced UI/UX with modern design principles | Tools: CorelDRAW, Photoshop, Figma | Improved accessibility & performance',
-      icon: <Briefcase className="w-6 h-6 text-cosmic-accent" />
-    },
+    // {
+    //   year: '2024',
+    //   title: 'Frontend Developer Intern',
+    //   company: 'HNK Securities Pvt. Ltd.',
+    //   description: 'Developed a responsive dashboard using React.js | Enhanced UI/UX with modern design principles | Tools: CorelDRAW, Photoshop, Figma | Improved accessibility & performance',
+    //   icon: <Briefcase className="w-6 h-6 text-cosmic-accent" />
+    // },
     {
       year: '2021 - 2024',
       title: 'BCCA',
@@ -24,13 +24,13 @@ const journeyData = [
       description: 'RTMNU | CGPA: 6.9 | Led & Organized PPT Competition 2023 | Participated in KDK Coding Competitions | Skills: JavaScript, Web Development, Git, HTML/CSS, SQL, Linux, Team Collaboration',
       icon: <Code className="w-6 h-6 text-cosmic-accent" />
     },
-    {
-      year: '2021',
-      title: 'Cybersecurity Certification',
-      company: 'Coursera (Microsoft)',
-      description: 'Completed with 90% | Hands-on experience with security tools & threat analysis | Developed security-focused mini-projects',
-      icon: <Code className="w-6 h-6 text-cosmic-accent" />
-    },
+    // {
+    //   year: '2021',
+    //   title: 'Cybersecurity Certification',
+    //   company: 'Coursera (Microsoft)',
+    //   description: 'Completed with 90% | Hands-on experience with security tools & threat analysis | Developed security-focused mini-projects',
+    //   icon: <Code className="w-6 h-6 text-cosmic-accent" />
+    // },
     {
       year: '2019 - 2021',
       title: 'HSC (Science)',

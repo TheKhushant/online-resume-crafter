@@ -16,17 +16,18 @@
     --popover: 240 25% 5%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 270 70% 50%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 90% 55%;              
+    --primary-foreground: 0 0% 100%;
 
+    
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 317 100% 50%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 320 85% 60%;               /* Bright pink */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -78,13 +79,13 @@
 
 @keyframes gradientFlow {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 20%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 20%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 20%;
   }
 }
 

@@ -68,7 +68,9 @@ export default {
 					accent: '#7928CA',
 					glow: '#FF0080',
 					purple: '#9b87f5',
-					blue: '#33C3F0'
+					blue: '#33C3F0',			
+ 			       	pink: 'hsl(320, 85%, 60%)',
+        			orange: 'hsl(35, 100%, 55%)',
 				}
 			},
 			fontFamily: {

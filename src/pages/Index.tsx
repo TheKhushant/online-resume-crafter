@@ -9,6 +9,7 @@ import WorkSection from "../components/WorkSection";
 import ContactSection from "../components/ContactSection";
 import SkillsSection from "../components/SkillsSection";
 import SocialIcons from "../components/SocialIcons";
+import ExperienceSection from "@/components/ExperienceSection";
 
 const Index: React.FC = () => {
     return (
@@ -23,6 +24,9 @@ const Index: React.FC = () => {
             </div>
             <div id="skills">
                 <SkillsSection />
+            </div>
+            <div id="experience">
+                <ExperienceSection />
             </div>
             <div id="journey">
                 <JourneySection />
