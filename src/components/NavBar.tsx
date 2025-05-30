@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'skills', 'journey', 'certificates', 'activities', 'work', 'contact'];
+      const sections = ['home', 'skills','experience', 'journey', 'certificates', 'activities', 'work', 'contact'];
       
       // Check if scrolled past threshold for navbar styling
       if (window.scrollY > 50) {
@@ -44,6 +44,7 @@ const NavBar: React.FC = () => {
   const navLinks = [
     { name: 'Home', id: 'home' },
     { name: 'Skills', id: 'skills' },
+    { name: 'Experience', id: 'experience' },
     { name: 'Journey', id: 'journey' },
     { name: 'Certificates', id: 'certificates' },
     { name: 'Activities', id: 'activities' },

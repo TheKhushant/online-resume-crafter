@@ -118,9 +118,7 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                             </div>
                             <a
                                 href="https://drive.google.com/uc?export=download&id=1DA_Ef6EA59mE5afXVK7scaxHAj4FFQEe"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-6 py-3 h-12 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg hover:shadow-lg transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+                                target="_blank" rel="noopener noreferrer" className="px-6 py-3 h-12 rounded-lg bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-medium shadow-lg hover:shadow-lg transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
                             >
                                 Download CV 
                                 <Download size={18} />
