@@ -25,7 +25,7 @@ const SocialIcons: React.FC<SocialIconProps> = ({ className = '', size = 24 }) =
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 rounded-full bg-cosmic-accent/10 flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-cosmic-accent hover:to-cosmic-glow transition-all duration-300"
+          className="w-15 h-15 rounded-full bg-cosmic-accent/10 flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-cosmic-accent hover:to-cosmic-glow transition-all duration-300"
           aria-label={social.label}
         >
           {social.icon}

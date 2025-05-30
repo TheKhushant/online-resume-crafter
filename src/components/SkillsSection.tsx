@@ -7,14 +7,12 @@ const SkillsSection: React.FC = () => {
     {
       category: "Frontend",
       icon: <Globe className="w-6 h-6 text-cosmic-accent" />,
-      items: ["React", "TypeScript", "Tailwind CSS", "HTML5/CSS3"]
-      // "Next.js",
+      items: ["React", "TypeScript", "Tailwind CSS", "HTML5/CSS3", "Bootstrap", "JavaScript"]
     },
     {
       category: "Backend",
       icon: <Database className="w-6 h-6 text-cosmic-glow" />,
-      items: ["Python", "MongoDB"]
-      // "Node.js", "Express", , "PostgreSQL"
+      items: ["NODE.js", "Express", "Python", "OpenAI", "Gemini API","Postman", "N8N"]
     },
     {
       category: "Programming",
@@ -25,20 +23,23 @@ const SkillsSection: React.FC = () => {
       category: "Design",
       icon: <Palette className="w-6 h-6 text-purple-400" />,
       items: ["Adobe Photoshop", "Figma", "UI/UX Design", "CoralDraw"]
-      // "Illustrator",
     },
     {
       category: "Tools",
       icon: <Laptop className="w-6 h-6 text-green-400" />,
-      items: ["Git", "VS Code",,"npm"]
-      // "Docker", "AWS",, "Jira"
+      items: ["Git", "VS Code", "npm", "AWS", "N8N", "GitHub", "Postman"],
     },
     {
-      category: "Other",
+      category: "DataBase",
       icon: <PenTool className="w-6 h-6 text-orange-400" />,
-      items: ["Responsive Design",  "Performance Optimization"]
-      // "SEO",, "Agile Methodology"
-    }
+      // items: ["Responsive Design", "Performance Optimization", "Excel"]
+      items: ["MongoDB", "MySQL"],
+    },
+    {
+      category: "Operating Systems",
+      icon: <PenTool className="w-6 h-6 text-orange-400" />,
+      items: ["Windows", "Linux", "Ubuntu"],
+    },
   ];
 
   return (
@@ -53,7 +54,7 @@ const SkillsSection: React.FC = () => {
           </p>
         </div>
 
-        <div data-scroll data-scroll-speed="5" data-scroll-class="fade-in" data-scroll-repeat  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-scroll data-scroll-speed="5" data-scroll-class="fade-in" data-scroll-repeat  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {skills.map((skillGroup, index) => (
             <div 
               key={index} 
