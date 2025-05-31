@@ -104,7 +104,7 @@ const certificatesData = [
         id: 5,
         title: "SMACKATHON 24Hrs Hackathon",
         issuer: "COJAG, YCCE",
-        date: "March 2024",
+        date: "Aug 2024",
         description:
             "Participated in the SMACKATHON 24Hrs Hackathon, a 24-hour coding challenge to develop innovative solutions.",
         category: "SMACKATHON_24Hrs_Hackathon",
@@ -113,7 +113,7 @@ const certificatesData = [
         id: 6,
         title: "GFG ICPC 2.0",
         issuer: "GeeksforGeeks",
-        date: "October 2025",
+        date: "Feb 2025",
         description:
             "Certification for Achievements in the GFG ICPC 2.0 competitive programming event.",
         category: "GFG_ICPC",
@@ -122,7 +122,7 @@ const certificatesData = [
         id: 7,
         title: "PPT Completion Certificate",
         issuer: "KAMLA NEHRU MAHAVIDYALAYA",
-        date: "June 2022",
+        date: "July 2022",
         description:
             "Scored 2nd Rank in the PPT competition organized by KAMLA NEHRU MAHAVIDYALAYA, Nagpur.",
         category: "PPT",
@@ -131,7 +131,7 @@ const certificatesData = [
         id: 8,
         title: "Java Programming Certification",
         issuer: "Disha Computer Institute",
-        date: "October 2022",
+        date: "Dec 2023",
         description: "Hands-on course covering core Java concepts.",
         category: "JAVA",
     },
@@ -139,7 +139,7 @@ const certificatesData = [
         id: 9,
         title: "Frontend Web Development",
         issuer: "Disha Computer Institute",
-        date: "June 2022",
+        date: "Nov 2023",
         description:
             "Training on HTML, CSS, JavaScript, React, and responsive web design.",
         category: "Frontend",
@@ -176,7 +176,7 @@ const CertificatesSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 w-full md:grid-cols-2 md:max-w-3xl gap-6">
                         {certificates.map((cert) => (
                             <div
                                 key={cert.id}
