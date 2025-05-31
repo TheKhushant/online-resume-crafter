@@ -23,7 +23,7 @@ Welcome to my **Portfolio Website** — a modern, responsive, and dynamic platfo
 
 ## 📸 Preview
 
-![Portfolio Screenshot](https://user-images.githubusercontent.com/your-image-link.png) <!-- Replace with actual screenshot -->
+![Portfolio Screenshot](https://user-images.githubusercontent.com/first.png) <!-- Replace with actual screenshot -->
 
 ---
 
@@ -47,13 +47,57 @@ Here are the technologies I've worked with:
 
 ## 📊 Coding Achievements
 
-- 🧠 Solved **200+ coding questions** across top platforms
-- 🔥 Maintained **123 active days** of problem-solving & learning
-- 📈 Contributed **300+ times** on GitHub over **79 active days**
+- 🧠 Solved **500+ coding questions** across top platforms
+- 🔥 Maintained **171+ active days** of problem-solving & learning
+- 📈 Contributed **350+ times** on GitHub over **79 active days**
 
 *These stats are tracked and visualized on [Codolio](https://codolio.com/profile/KhushantWankhede).*
 
 ---
 
 ## 📂 Folder Structure
+online-resume-crafter/
+├── public/
+├── src/
+│ ├── components/
+│ ├── assets/
+│ ├── App.jsx
+│ └── main.jsx
+├── tailwind.config.js
+├── package.json
+└── README.md
+
+
+---
+
+## 🧠 Future Enhancements
+
+- Add a blog section to share insights and articles
+- Integrate backend for contact form (Node.js/Express or Firebase)
+- Dark/light mode toggle
+- Admin panel to update content from dashboard
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - feel free to use and modify it.
+
+---
+
+## 🙋‍♂️ About Me
+
+👋 Hi, I'm **Khushant Wankhede**, a passionate MCA student learning full-stack development, with interests in AI/ML and UI/UX design.  
+📍 Based in Nagpur, Maharashtra, India.
+
+📫 Reach out to me:
+- [LinkedIn](https://linkedin.com/in/khushant-wankhede)
+- [GitHub](https://github.com/TheKhushant)
+- [Codolio](https://codolio.com/profile/KhushantWankhede)
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ and sharing it with others. Feedback and contributions are welcome!
 
