@@ -36,8 +36,8 @@ const projectsData = [
     description: 'A Advanced Feature system for managing railway employee Duty, auto scheduling, and many more.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB','APIs', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'Socket.io', 'Redux'],
     image: ["img/rail.jpg"],
-    // github: '#',
-    // liveDemo: '#'
+    github: '#',
+    liveDemo: '#'
   },
 
   // {
@@ -82,7 +82,7 @@ const WorkSection: React.FC = () => {
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
-                    src={project.image} 
+                    src={project.image[0]} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
@@ -96,7 +96,7 @@ const WorkSection: React.FC = () => {
                     {project.technologies.map((tech, index) => (
                       <span 
                         key={index}
-                        className="px-3 py-1 bg-cosmic-accent/10 text-cosmic-accent rounded-full text-xs font-medium"
+                        className="px-3 py-1 bg-cosmic-accent/40 text-pink-200 rounded-full text-xs font-medium"
                       >
                         {tech}
                       </span>
@@ -108,7 +108,7 @@ const WorkSection: React.FC = () => {
                       href={project.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-white hover:text-cosmic-accent transition-colors"
+                      className="flex items-center gap-2 text-white hover:text-yellow-400 transition-colors"
                     >
                       <Github size={18} />
                       <span>Code</span>
@@ -118,7 +118,7 @@ const WorkSection: React.FC = () => {
                       href={project.liveDemo} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-white hover:text-cosmic-glow transition-colors"
+                      className="flex items-center gap-2 text-white hover:text-orange-400 transition-colors"
                     >
                       <span>Live Demo</span>
                       <ExternalLink size={18} />

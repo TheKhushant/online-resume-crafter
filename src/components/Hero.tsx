@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Contact, Download, Phone } from "lucide-react";
 
 interface HeroProps {
     name: string;
@@ -121,10 +121,10 @@ const Hero: React.FC<HeroProps> = ({ name, title }) => {
                             <div className="hidden md:flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
                                 <button
                                     onClick={() => scrollToSection("contact")}
-                                    className="px-6 py-3 h-12 rounded-lg bg-gradient-to-r from-cosmic-accent to-cosmic-glow text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+                                    className="px-6 py-3 h-12 rounded-lg bg-gradient-to-r from-yellow-500 via-green-400 to-blue-500 text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
                                 >
                                     Contact Me
-                                    <ArrowRight size={18} />
+                                    <Phone size={18} />
                                 </button>
 
                                 <button
