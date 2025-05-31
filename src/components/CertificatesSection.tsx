@@ -25,59 +25,43 @@ const certificateCategories: {
     },
     Cyber: {
         description:
-        "In-depth courses on cybersecurity fundamentals, encryption, ethical hacking, and secure systems.",
-        images: [
-            "Certi/Cyber/Certi1.png",
-        ],
+            "In-depth courses on cybersecurity fundamentals, encryption, ethical hacking, and secure systems.",
+        images: ["Certi/Cyber/Certi1.png"],
     },
     Project_Management: {
         description:
             "Comprehensive training on project management methodologies, tools, and best practices.",
-        images: [
-            "Certi/Project_Management/Certi1.png",
-        ],
+        images: ["Certi/Project_Management/Certi1.png"],
     },
     Smart_India_Hackathon: {
         description:
             "Participated in the Smart India Hackathon 2024, a nationwide initiative to provide students with a platform to solve real-world problems.",
-        images: [
-            "Certi/Hackthon/SmartIndia.png",
-        ],
+        images: ["Certi/Hackthon/SmartIndia.png"],
     },
     SMACKATHON_24Hrs_Hackathon: {
         description:
             "Participated in the SMACKATHON 24Hrs Hackathon, a 24-hour coding challenge to develop innovative solutions.",
-        images: [
-            "Certi/Hackthon/SMACKATHON.png",
-        ],
+        images: ["Certi/Hackthon/SMACKATHON.png"],
     },
     GFG_ICPC: {
         description:
             "Participated in the GFG ICPC 2.0, a competitive programming event focused on algorithmic challenges.",
-        images: [
-            "Certi/Hackthon/GFG.png",
-        ],
+        images: ["Certi/Hackthon/GFG.png"],
     },
     PPT: {
         description:
             "Scored 2nd Rank in the PPT competition organized by KAMLA NEHRU MAHAVIDYALAYA, Nagpur.",
-        images: [
-            "Certi/Hackthon/PPPT.png",
-        ],
+        images: ["Certi/Hackthon/PPPT.png"],
     },
     JAVA: {
         description:
             "Hands-on course covering core Java concepts, object-oriented programming, and application development.",
-        images: [
-            "Certi/Tech/java.png",
-        ],
+        images: ["Certi/Tech/java.png"],
     },
     Frontend: {
         description:
             "Hands-on course covering HTML, CSS, JavaScript, React, and responsive web design.",
-        images: [
-            "Certi/Tech/Frontend.png",
-        ],
+        images: ["Certi/Tech/Frontend.png"],
     },
 };
 
@@ -87,7 +71,8 @@ const certificatesData = [
         title: "UI/UX Design Certification",
         issuer: "Google, Coursera",
         date: "Dec 2024",
-        description: "UI/UX foundational training including prototyping and usability.",
+        description:
+            "UI/UX foundational training including prototyping and usability.",
         category: "UI",
     },
     {
@@ -111,7 +96,8 @@ const certificatesData = [
         title: "SMART INDIA HACKATHON 2024",
         issuer: "Ramdeobaba College",
         date: "Sep 2024",
-        description: "Participated in the Smart India Hackathon 2024, a nationwide initiative to provide students with a platform to solve real-world problems.",
+        description:
+            "Participated in the Smart India Hackathon 2024, a nationwide initiative to provide students with a platform to solve real-world problems.",
         category: "Smart_India_Hackathon",
     },
     {
@@ -119,7 +105,8 @@ const certificatesData = [
         title: "SMACKATHON 24Hrs Hackathon",
         issuer: "COJAG, YCCE",
         date: "March 2024",
-        description: "Participated in the SMACKATHON 24Hrs Hackathon, a 24-hour coding challenge to develop innovative solutions.",
+        description:
+            "Participated in the SMACKATHON 24Hrs Hackathon, a 24-hour coding challenge to develop innovative solutions.",
         category: "SMACKATHON_24Hrs_Hackathon",
     },
     {
@@ -127,7 +114,8 @@ const certificatesData = [
         title: "GFG ICPC 2.0",
         issuer: "GeeksforGeeks",
         date: "October 2025",
-        description: "Certification for Achievements in the GFG ICPC 2.0 competitive programming event.",
+        description:
+            "Certification for Achievements in the GFG ICPC 2.0 competitive programming event.",
         category: "GFG_ICPC",
     },
     {
@@ -135,8 +123,9 @@ const certificatesData = [
         title: "PPT Completion Certificate",
         issuer: "KAMLA NEHRU MAHAVIDYALAYA",
         date: "June 2022",
-        description: "Scored 2nd Rank in the PPT competition organized by KAMLA NEHRU MAHAVIDYALAYA, Nagpur.",
-        category: "PPT", 
+        description:
+            "Scored 2nd Rank in the PPT competition organized by KAMLA NEHRU MAHAVIDYALAYA, Nagpur.",
+        category: "PPT",
     },
     {
         id: 8,
@@ -144,15 +133,16 @@ const certificatesData = [
         issuer: "Disha Computer Institute",
         date: "October 2022",
         description: "Hands-on course covering core Java concepts.",
-        category: "JAVA", 
+        category: "JAVA",
     },
     {
         id: 9,
         title: "Frontend Web Development",
         issuer: "Disha Computer Institute",
         date: "June 2022",
-        description: "Training on HTML, CSS, JavaScript, React, and responsive web design.",
-        category: "Frontend", 
+        description:
+            "Training on HTML, CSS, JavaScript, React, and responsive web design.",
+        category: "Frontend",
     },
 ];
 
@@ -168,7 +158,9 @@ const CertificatesSection: React.FC = () => {
         setActiveCategory(null);
     };
 
-    const certificates = viewMore ? certificatesData : certificatesData.slice(0, 4);
+    const certificates = viewMore
+        ? certificatesData
+        : certificatesData.slice(0, 4);
 
     return (
         <div className="min-h-screen bg-cosmic-dark relative z-0">
@@ -179,7 +171,8 @@ const CertificatesSection: React.FC = () => {
                             My <span className="neon-text">Certificates</span>
                         </h1>
                         <p className="text-white/70 text-lg">
-                            Professional certifications and courses I've completed
+                            Professional certifications and courses I've
+                            completed
                         </p>
                     </div>
 
@@ -204,7 +197,9 @@ const CertificatesSection: React.FC = () => {
                                         {cert.date}
                                     </span>
                                 </div>
-                                <p className="text-white/80 mb-4 flex-grow">{cert.description}</p>
+                                <p className="text-white/80 mb-4 flex-grow">
+                                    {cert.description}
+                                </p>
                                 <button
                                     onClick={() => handleView(cert.category)}
                                     className="flex items-center gap-2 text-cosmic-accent hover:text-cosmic-glow transition-colors mt-auto"
@@ -229,8 +224,8 @@ const CertificatesSection: React.FC = () => {
 
             {/* Modal */}
             {activeCategory && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
-                    <div className="bg-cosmic-dark rounded-xl shadow-lg max-w-3xl w-full relative overflow-hidden">
+                <div className="fixed inset-10 bg-opacity-80 flex items-center z-50 justify-center px-4">
+                    <div className="bg-cosmic-dark rounded-xl shadow-lg max-w-3xl w-full relative inset-10 overflow-hidden">
                         <button
                             onClick={handleClose}
                             className="absolute top-4 right-4 text-white hover:text-red-500 z-10"
@@ -242,7 +237,10 @@ const CertificatesSection: React.FC = () => {
                                 {activeCategory} Certificates
                             </h2>
                             <p className="text-white/80 mb-6">
-                                {certificateCategories[activeCategory].description}
+                                {
+                                    certificateCategories[activeCategory]
+                                        .description
+                                }
                             </p>
                             <Swiper
                                 modules={[Navigation, Pagination, Autoplay]}
@@ -252,7 +250,9 @@ const CertificatesSection: React.FC = () => {
                                 pagination={{ clickable: true }}
                                 autoplay={{ delay: 3000 }}
                             >
-                                {certificateCategories[activeCategory].images.map((img, idx) => (
+                                {certificateCategories[
+                                    activeCategory
+                                ].images.map((img, idx) => (
                                     <SwiperSlide key={idx}>
                                         <img
                                             src={img}
