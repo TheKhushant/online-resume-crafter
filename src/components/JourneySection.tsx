@@ -33,16 +33,16 @@ const journeyData = [
     // },
     {
       year: '2019 - 2021',
-      title: 'HSC (Science)',
+      title: 'HSC',
       company: 'Dr. Vasantrao Naik Government College',
-      description: 'Percentage: 74.5% | Science Stream | Developed a Java-based Library Management System as a school project | Gained foundational programming & database skills',
+      description: 'Percentage: 74.5% | Did Preparation for Competitive Exams | Learned NCERT BOOKS',
       icon: <Code className="w-6 h-6 text-cosmic-accent" />
     },
     {
       year: '2019',
       title: 'SSC',
       company: 'Priyadarshani Convent',
-      description: 'Percentage: 63.5% | Represented school in Priyadarshani Bhagwati College Science Exhibition | Built a working model for environmental awareness',
+      description: 'Percentage: 63.5% | Represented school in Jyotiba Prathamik Mahavidyalaya | Built a working model for environmental awareness',
       icon: <GraduationCap className="w-6 h-6 text-cosmic-accent" />
     }
   
