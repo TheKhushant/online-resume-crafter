@@ -5,7 +5,7 @@ import { Github, ExternalLink } from 'lucide-react';
 const projectsData = [
   {
     id: 1,
-    title: 'Women Safty',
+    title: 'first',
     description: 'A modern e-commerce solution with cart functionality, user authentication, and payment processing.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80',
