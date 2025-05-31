@@ -5,40 +5,59 @@ import { Github, ExternalLink } from 'lucide-react';
 const projectsData = [
   {
     id: 1,
-    title: 'first',
-    description: 'A modern e-commerce solution with cart functionality, user authentication, and payment processing.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80',
-    github: '#',
-    liveDemo: '#'
+    title: 'Swiggy Clone',
+    description: 'A full-stack food delivery application with user authentication.',
+    technologies: ['React.js', 'Tailwind Css', 'Custom API', 'Node.js'],
+    image: ["img/swi.png"],
+    github: 'https://github.com/TheKhushant/Swiggy-CLone-Practice',
+    liveDemo: 'https://swiggy-c-lone-practice-psi.vercel.app/'
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A collaborative task management tool with real-time updates, task assignment, and progress tracking.',
-    technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80',
-    github: '#',
-    liveDemo: '#'
+    title: 'Image Filter Website',
+    description: 'A web application that applies various filters to images.',
+    technologies: ['Html - CSS','Javascript', 'Python', 'OpenCV (cv2)',' NumPy', 'Flask'],
+    image: ["img/IP.png"],
+    github: 'https://github.com/TheKhushant/Image_Filter',
+    liveDemo: 'https://image-filter-4pce.onrender.com/'
   },
   {
     id: 3,
-    title: 'Portfolio Website',
+    title: 'Portfolio Website (current)',
     description: 'A responsive, animated portfolio website to showcase skills and projects.',
     technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80',
-    github: '#',
-    liveDemo: '#'
+    image: ["img/port.png"],
+    github: 'https://github.com/TheKhushant/online-resume-crafter',
+    liveDemo: 'https://portfolionew-orcin-pi.vercel.app/'
   },
   {
     id: 4,
-    title: 'Weather Dashboard',
-    description: 'A weather application providing real-time forecasts, historical data, and location-based weather information.',
-    technologies: ['React', 'OpenWeatherMap API', 'Chart.js'],
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
-    github: '#',
-    liveDemo: '#'
-  }
+    title: 'Railway Employee Management System (Upcoming)',
+    description: 'A Advanced Feature system for managing railway employee Duty, auto scheduling, and many more.',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB','APIs', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'Socket.io', 'Redux'],
+    image: ["img/rail.jpg"],
+    // github: '#',
+    // liveDemo: '#'
+  },
+
+  // {
+  //   id: 4,
+  //   title: 'Weather Dashboard',
+  //   description: 'A weather application providing real-time forecasts, historical data, and location-based weather information.',
+  //   technologies: ['React', 'OpenWeatherMap API', 'Chart.js'],
+  //   image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+  //   github: '#',
+  //   liveDemo: '#'
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Task Management App',
+  //   description: 'A collaborative task management tool with real-time updates, task assignment, and progress tracking.',
+  //   technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
+  //   image: ['img/task.png'],
+  //   github: '#',
+  //   liveDemo: '#'
+  // }
 ];
 
 const WorkSection: React.FC = () => {
