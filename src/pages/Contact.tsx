@@ -34,17 +34,17 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-5 h-5 text-cosmic-glow" />,
+      icon: <Mail className="w-5 h-5 text-yellow-500" />,
       text: 'email@example.com',
       href: 'mailto:email@example.com'
     },
     {
-      icon: <Phone className="w-5 h-5 text-cosmic-glow" />,
+      icon: <Phone className="w-5 h-5 text-yellow-500" />,
       text: '+1 (123) 456-7890',
       href: 'tel:+11234567890'
     },
     {
-      icon: <MapPin className="w-5 h-5 text-cosmic-glow" />,
+      icon: <MapPin className="w-5 h-5 text-yellow-500" />,
       text: 'New York, NY, USA',
       href: '#'
     }

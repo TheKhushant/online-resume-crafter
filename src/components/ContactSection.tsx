@@ -42,25 +42,25 @@ const ContactSection: React.FC = () => {
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Mail className="w-6 h-6 text-cosmic-accent mt-1" />
+                  <Mail className="w-6 h-6 text-yellow-500 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-white">Email</h3>
-                    <a href="mailto:wankhedekhushant57@gmail.com" className="text-white/70 hover:text-cosmic-accent transition-colors">
+                    <a href="mailto:wankhedekhushant57@gmail.com" className="text-white/70 hover:text-yellow-500 transition-colors">
                       wankhedekhushant57@gmail.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-cosmic-accent mt-1" />
+                  <Phone className="w-6 h-6 text-yellow-500 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-white">Phone</h3>
-                    <a href="tel:+918007307435" className="text-white/70 hover:text-cosmic-accent transition-colors">
+                    <a href="tel:+918007307435" className="text-white/70 hover:text-yellow-500 transition-colors">
                       +91 8007307435
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-cosmic-accent mt-1" />
+                  <MapPin className="w-6 h-6 text-yellow-500 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-white">Location</h3>
                     <p className="text-white/70">Nandanvan, Nagpur, India - 440 024</p>
@@ -84,7 +84,7 @@ const ContactSection: React.FC = () => {
                   <label htmlFor="message" className="block text-white mb-2">Message</label>
                   <textarea name="message" rows={4} className="w-full p-3 bg-cosmic-dark border border-white/20 rounded-lg focus:border-cosmic-accent focus:outline-none text-white resize-none" placeholder="Your Message" required></textarea>
                 </div>
-                <button type="submit" className="px-6 py-3 rounded-lg bg-gradient-to-r from-cosmic-accent to-cosmic-glow text-white font-medium shadow-lg shadow-cosmic-accent/20 hover:shadow-cosmic-accent/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1">
+                <button type="submit" className="px-6 py-3 rounded-lg bg-gradient-to-r from-yellow-500 to-blue-500 text-white font-medium shadow-lg shadow-yellow-500/20 hover:shadow-yellow-500/40 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1">
                   Send Message <Send size={18} />
                 </button>
                 {status && <p className="text-white mt-4">{status}</p>}

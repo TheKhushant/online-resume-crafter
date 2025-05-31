@@ -176,13 +176,13 @@ const CertificatesSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 w-full md:grid-cols-2 md:max-w-3xl gap-6">
+                    <div className="grid grid-cols-1 w-full md:grid-cols-2 md:max-w-3xl gap-3 lg:grid-cols-2 lg:max-w-4xl mx-auto">
                         {certificates.map((cert) => (
                             <div
                                 key={cert.id}
                                 className="glassmorphism rounded-xl p-6 card-hover relative flex flex-col"
                             >
-                                <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-cosmic-accent to-cosmic-glow rounded-full flex items-center justify-center shadow-lg">
+                                <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-cosmic-accent to-blue-500 rounded-full flex items-center justify-center shadow-lg">
                                     <Award className="w-6 h-6 text-white" />
                                 </div>
 
@@ -190,7 +190,7 @@ const CertificatesSection: React.FC = () => {
                                     {cert.title}
                                 </h3>
                                 <div className="flex items-center justify-between mb-4">
-                                    <span className="text-cosmic-purple font-semibold">
+                                    <span className="text-yellow-500 font-semibold">
                                         {cert.issuer}
                                     </span>
                                     <span className="text-white/60 text-sm">
@@ -202,7 +202,7 @@ const CertificatesSection: React.FC = () => {
                                 </p>
                                 <button
                                     onClick={() => handleView(cert.category)}
-                                    className="flex items-center gap-2 text-cosmic-accent hover:text-cosmic-glow transition-colors mt-auto"
+                                    className="flex items-center gap-2 text-yellow-500 hover:text-orange-500 transition-colors mt-auto"
                                 >
                                     <span>View Certificate</span>
                                     <ExternalLink size={16} />
