@@ -7,7 +7,7 @@ const journeyData = [
       year: '2024 - Present',
       title: 'MCA (AI/ML)',
       company: 'Shree Ramdeobaba University',
-      description: '95.66 MCA-CET Score | AI & ML Specialization | Smart India Hackathon Finalist | GFG ICPC 2.0 Participant | Developed Women Safety Web App & AI-Powered Notes Sharing System | Skills: C++, Java, React.js, DSA, Problem-Solving, Leadership',
+      description: 'CGPA: 8.2 | 95.66 MCA-CET Score | AI & ML Specialization | Smart India Hackathon Finalist | GFG ICPC 2.0 Participant | Developed Women Safety Web App & AI-Powered Notes Sharing System | Skills: C++, Java, React.js, DSA, Problem-Solving, Leadership',
       icon: <Briefcase className="w-6 h-6 text-cosmic-accent" />
     },
     // {
