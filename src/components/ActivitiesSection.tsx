@@ -3,12 +3,13 @@ import React from 'react';
 import { Code, Globe, BookOpen, Users } from 'lucide-react';
 
 const activitiesData = [
-  {
-    id: 1,
-    title: 'Open Source Contributions',
-    description: 'Active contributor to several open-source projects, including React libraries and developer tools.',
-    icon: <Code className="w-12 h-12 text-cosmic-glow" />,
-  },
+  // {
+  //   id: 1,
+  //   title: 'Open Source Contributions',
+  //   description: 'Active contributor to several open-source projects, including React libraries and developer tools.',
+  //   icon: <Code className="w-12 h-12 text-cosmic-glow" />,
+  // },
+  
   {
     id: 2,
     title: 'Tech Community Engagement',
