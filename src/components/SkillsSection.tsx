@@ -7,48 +7,43 @@ const SkillsSection: React.FC = () => {
             category: "Frontend",
             icon: <Globe className="w-6 h-6 text-cosmic-accent" />,
             items: [
-                "React",
-                "TypeScript",
-                "Tailwind CSS",
-                "HTML5/CSS3",
-                "Bootstrap",
-                "JavaScript",
-            ],
+                "React", "Tailwind CSS", "HTML5/CSS3", "Bootstrap", "JavaScript",
+            ], //"TypeScript",
         },
-        {
-            category: "Backend",
-            icon: <Database className="w-6 h-6 text-cosmic-glow" />,
-            items: [
-                "NODE.js",
-                "Express",
-                "Python",
-                "OpenAI",
-                "Gemini API",
-                "Postman",
-                "N8N",
-            ],
-        },
+        // {
+        //     category: "Backend",
+        //     icon: <Database className="w-6 h-6 text-cosmic-glow" />,
+        //     items: [
+        //         "NODE.js",
+        //         "Express",
+        //         "Python",
+        //         "OpenAI",
+        //         "Gemini API",
+        //         "Postman",
+        //         "N8N",
+        //     ],
+        // },
         {
             category: "Programming",
             icon: <Code className="w-6 h-6 text-sky-400" />,
-            items: ["JavaScript", "TypeScript", "Python", "Java", "C++", "C"],
+            items: ["JavaScript", "Java", "C++", "C"], //"TypeScript", "Python",
         },
         {
             category: "Design",
             icon: <Palette className="w-6 h-6 text-purple-400" />,
-            items: ["Adobe Photoshop", "Figma", "UI/UX Design", "CoralDraw"],
+            items: ["Adobe Photoshop", "CoralDraw"], //"Figma", "UI/UX Design", "Canva"
         },
         {
             category: "Tools",
             icon: <Laptop className="w-6 h-6 text-green-400" />,
-            items: ["Git", "VS Code", "npm", "AWS", "N8N", "GitHub", "Postman"],
+            items: ["Git", "VS Code", "GitHub", "Postman"], //"npm", "AWS",  "N8N",
         },
-        {
-            category: "DataBase",
-            icon: <PenTool className="w-6 h-6 text-orange-400" />,
-            // items: ["Responsive Design", "Performance Optimization", "Excel"]
-            items: ["MongoDB", "MySQL"],
-        },
+        // {
+        //     category: "DataBase",
+        //     icon: <PenTool className="w-6 h-6 text-orange-400" />,
+        //     // items: ["Responsive Design", "Performance Optimization", "Excel"]
+        //     items: ["MongoDB", "MySQL"],
+        // },
         {
             category: "Operating Systems",
             icon: <PenTool className="w-6 h-6 text-orange-400" />,
