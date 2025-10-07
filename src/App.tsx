@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import MouseTrail from "@/components/MouseTrail";
+// import MouseTrail from "@/components/MouseTrail";
 
 const queryClient = new QueryClient();
 //to disable right click on website
@@ -26,11 +26,11 @@ const App = () => {
 
   return (
     <div data-scroll-container>
-      <MouseTrail />
+      {/* <MouseTrail/> */}
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <Toaster />
-          <Sonner />
+          <Toaster/>
+          <Sonner/>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />

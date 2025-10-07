@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Award, ExternalLink, X } from "lucide-react";
+import { Award, ExternalLink, X, ChevronDown, ChevronUp } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -74,6 +74,7 @@ const certificatesData = [
         description:
             "UI/UX foundational training including prototyping and usability.",
         category: "UI",
+        color: "from-cyan-400 to-blue-500"
     },
     {
         id: 2,
@@ -82,6 +83,7 @@ const certificatesData = [
         date: "Mar 2025",
         description: "Network security, encryption, and ethical hacking.",
         category: "Cyber",
+        color: "from-green-400 to-emerald-500"
     },
     {
         id: 3,
@@ -90,6 +92,7 @@ const certificatesData = [
         date: "Mar 2025",
         description: "Project management principles and practices.",
         category: "Project_Management",
+        color: "from-purple-400 to-pink-500"
     },
     {
         id: 4,
@@ -99,6 +102,7 @@ const certificatesData = [
         description:
             "Participated in the Smart India Hackathon 2024, a nationwide initiative to provide students with a platform to solve real-world problems.",
         category: "Smart_India_Hackathon",
+        color: "from-orange-400 to-red-500"
     },
     {
         id: 5,
@@ -108,6 +112,7 @@ const certificatesData = [
         description:
             "Participated in the SMACKATHON 24Hrs Hackathon, a 24-hour coding challenge to develop innovative solutions.",
         category: "SMACKATHON_24Hrs_Hackathon",
+        color: "from-yellow-400 to-amber-500"
     },
     {
         id: 6,
@@ -117,6 +122,7 @@ const certificatesData = [
         description:
             "Certification for Achievements in the GFG ICPC 2.0 competitive programming event.",
         category: "GFG_ICPC",
+        color: "from-cyan-400 to-purple-400"
     },
     {
         id: 7,
@@ -126,6 +132,7 @@ const certificatesData = [
         description:
             "Scored 2nd Rank in the PPT competition organized by KAMLA NEHRU MAHAVIDYALAYA, Nagpur.",
         category: "PPT",
+        color: "from-green-400 to-blue-400"
     },
     {
         id: 8,
@@ -134,6 +141,7 @@ const certificatesData = [
         date: "Dec 2023",
         description: "Hands-on course covering core Java concepts.",
         category: "JAVA",
+        color: "from-red-400 to-orange-400"
     },
     {
         id: 9,
@@ -143,6 +151,7 @@ const certificatesData = [
         description:
             "Training on HTML, CSS, JavaScript, React, and responsive web design.",
         category: "Frontend",
+        color: "from-purple-400 to-cyan-400"
     },
 ];
 
@@ -160,105 +169,148 @@ const CertificatesSection: React.FC = () => {
 
     const certificates = viewMore
         ? certificatesData
-        : certificatesData.slice(0, 4);
+        : certificatesData.slice(0, 6);
 
     return (
-        <div className="min-h-screen bg-cosmic-dark relative z-0">
-            <div className="container mx-auto px-4 md:px-6 pt-24 pb-16">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            My <span className="neon-text">Certificates</span>
-                        </h1>
-                        <p className="text-white/70 text-lg">
-                            Professional certifications and courses I've
-                            completed
-                        </p>
-                    </div>
+        <section className="py-16 w-full relative overflow-hidden" id="certificates">
+            {/* Background Elements - Same as Skills Section */}
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-400/10 rounded-full blur-xl"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-purple-400/10 rounded-full blur-xl"></div>
+            </div>
 
-                    <div className="grid grid-cols-1 w-full md:grid-cols-2 md:max-w-3xl gap-3 lg:grid-cols-2 lg:max-w-4xl mx-auto">
-                        {certificates.map((cert) => (
-                            <div
-                                key={cert.id}
-                                className="glassmorphism rounded-xl p-6 card-hover relative flex flex-col"
-                            >
-                                <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-cosmic-accent to-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                                    <Award className="w-6 h-6 text-white" />
-                                </div>
+            <div className="container mx-auto px-4 md:px-6 max-w-6xl relative z-10">
+                {/* Section Header */}
+                <div className="text-center mb-12">
+                    <h2 
+                        data-scroll
+                        data-scroll-speed="0.5"
+                        className="text-3xl md:text-4xl font-bold text-white mb-4"
+                    >
+                        My <span className="text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text">Certificates</span>
+                    </h2>
+                    <p 
+                        data-scroll
+                        data-scroll-speed="0.3"
+                        className="text-white/70 text-lg"
+                    >
+                        Professional certifications and courses I've completed
+                    </p>
+                </div>
 
-                                <h3 className="text-xl font-bold text-white mb-2 mt-2">
-                                    {cert.title}
-                                </h3>
-                                <div className="flex items-center justify-between mb-4">
-                                    <span className="text-yellow-500 font-semibold">
-                                        {cert.issuer}
-                                    </span>
-                                    <span className="text-white/60 text-sm">
-                                        {cert.date}
-                                    </span>
-                                </div>
-                                <p className="text-white/80 mb-4 flex-grow">
-                                    {cert.description}
-                                </p>
-                                <button
-                                    onClick={() => handleView(cert.category)}
-                                    className="flex items-center gap-2 text-yellow-500 hover:text-orange-500 transition-colors mt-auto"
-                                >
-                                    <span>View Certificate</span>
-                                    <ExternalLink size={16} />
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="text-center py-10">
-                        <button
-                            onClick={() => setViewMore(!viewMore)}
-                            className="px-6 py-3 h-12 rounded-lg glassmorphism text-white font-medium shadow-lg hover:shadow-cosmic-glow/20 transition-all duration-300 hover:-translate-y-1"
+                {/* Certificates Grid */}
+                <div 
+                    data-scroll
+                    data-scroll-speed="0.8"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8"
+                >
+                    {certificates.map((cert) => (
+                        <div
+                            key={cert.id}
+                            className="relative group bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-white/20 transition-all duration-500 h-full flex flex-col"
                         >
-                            {viewMore ? "View Less" : "View More"}
-                        </button>
-                    </div>
+                            {/* Certificate Icon */}
+                            <div className={`absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br ${cert.color} rounded-full flex items-center justify-center shadow-lg z-10`}>
+                                <Award className="w-5 h-5 text-white" />
+                            </div>
+
+                            {/* Hover Gradient Background */}
+                            <div 
+                                className={`absolute inset-0 rounded-xl bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                            />
+
+                            {/* Content */}
+                            <h3 className="text-lg font-semibold text-white mb-2 pr-8">
+                                {cert.title}
+                            </h3>
+                            
+                            <div className="flex items-center justify-between mb-3">
+                                <span className="text-cyan-300 font-medium text-sm">
+                                    {cert.issuer}
+                                </span>
+                                <span className="text-white/60 text-xs">
+                                    {cert.date}
+                                </span>
+                            </div>
+                            
+                            <p className="text-white/80 text-sm mb-4 flex-grow leading-relaxed">
+                                {cert.description}
+                            </p>
+                            
+                            <button
+                                onClick={() => handleView(cert.category)}
+                                className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 mt-auto group/view"
+                            >
+                                <span className="text-sm font-medium">View Certificate</span>
+                                <ExternalLink size={14} className="group-hover/view:translate-x-0.5 transition-transform duration-300" />
+                            </button>
+
+                            {/* Hover Border Effect */}
+                            <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+                                <div className="w-full h-full bg-cosmic-dark rounded-xl" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* View More Button */}
+                <div 
+                    data-scroll
+                    data-scroll-speed="0.3"
+                    className="text-center"
+                >
+                    <button
+                        onClick={() => setViewMore(!viewMore)}
+                        className="px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm text-white font-medium border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center gap-2 mx-auto hover:scale-105"
+                    >
+                        <span>{viewMore ? "Show Less" : "View More Certificates"}</span>
+                        {viewMore ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                    </button>
                 </div>
             </div>
 
             {/* Modal */}
             {activeCategory && (
-                <div className="fixed inset-10 bg-opacity-80 flex items-center z-50 justify-center px-4">
-                    <div className="bg-cosmic-dark rounded-xl shadow-lg max-w-3xl w-full relative inset-10 overflow-hidden">
-                        <button
-                            onClick={handleClose}
-                            className="absolute top-4 right-4 text-white hover:text-red-500 z-10"
-                        >
-                            <X size={24} />
-                        </button>
-                        <div className="p-6">
-                            <h2 className="text-white text-2xl font-bold mb-4">
-                                {activeCategory} Certificates
+                <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+                    <div className="bg-white/10 backdrop-blur-xl rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-white/20">
+                        <div className="flex items-center justify-between p-6 border-b border-white/10">
+                            <h2 className="text-white text-2xl font-bold">
+                                {activeCategory.replace(/_/g, ' ')} Certificates
                             </h2>
-                            <p className="text-white/80 mb-6">
-                                {
-                                    certificateCategories[activeCategory]
-                                        .description
-                                }
+                            <button
+                                onClick={handleClose}
+                                className="text-white/70 hover:text-white transition-colors duration-300 p-1"
+                            >
+                                <X size={24} />
+                            </button>
+                        </div>
+                        
+                        <div className="p-6">
+                            <p className="text-white/80 mb-6 text-center">
+                                {certificateCategories[activeCategory].description}
                             </p>
                             <Swiper
                                 modules={[Navigation, Pagination, Autoplay]}
                                 spaceBetween={20}
                                 slidesPerView={1}
                                 navigation
-                                pagination={{ clickable: true }}
-                                autoplay={{ delay: 3000 }}
+                                pagination={{ 
+                                    clickable: true,
+                                    bulletClass: 'swiper-pagination-bullet bg-white/30',
+                                    bulletActiveClass: 'swiper-pagination-bullet-active bg-cyan-400'
+                                }}
+                                autoplay={{ delay: 4000 }}
+                                className="rounded-lg overflow-hidden"
                             >
-                                {certificateCategories[
-                                    activeCategory
-                                ].images.map((img, idx) => (
+                                {certificateCategories[activeCategory].images.map((img, idx) => (
                                     <SwiperSlide key={idx}>
-                                        <img
-                                            src={img}
-                                            alt={`Certificate ${idx + 1}`}
-                                            className="rounded-lg mx-auto max-h-[500px] w-auto"
-                                        />
+                                        <div className="flex items-center justify-center bg-black/20 rounded-lg p-4">
+                                            <img
+                                                src={img}
+                                                alt={`Certificate ${idx + 1}`}
+                                                className="rounded-lg max-h-[500px] w-auto max-w-full"
+                                            />
+                                        </div>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
@@ -266,7 +318,19 @@ const CertificatesSection: React.FC = () => {
                     </div>
                 </div>
             )}
-        </div>
+
+            {/* Custom Styles */}
+            <style>{`
+                .swiper-pagination-bullet {
+                    width: 8px;
+                    height: 8px;
+                    opacity: 0.5;
+                }
+                .swiper-pagination-bullet-active {
+                    opacity: 1;
+                }
+            `}</style>
+        </section>
     );
 };
 

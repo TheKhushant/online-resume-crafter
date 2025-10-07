@@ -1,0 +1,18 @@
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-3px) rotate(1deg); }
+  66% { transform: translateY(2px) rotate(-1deg); }
+}
+
+.group:hover .floating {
+  animation: float 2s ease-in-out infinite;
+}
+
+.magnetic-item {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
