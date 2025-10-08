@@ -21,8 +21,6 @@ const Index: React.FC = () => {
   const isScrolling = useRef(false);
   const scrollTimeout = useRef<NodeJS.Timeout>();
 
-  // Sections that should auto-scroll
-  const autoScrollSections = ["home", "skills", "activities", "contact"];
   const allSections = ["home", "skills", "experience", "journey", "certificates", "activities", "work", "contact"];
 
   // Smooth mouse movement with requestAnimationFrame
@@ -54,43 +52,7 @@ const Index: React.FC = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Auto-scroll to next section when 50% of current section is scrolled (only for specific sections)
-  const checkAutoScroll = () => {
-    if (isScrolling.current) return;
-
-    const currentIndex = allSections.indexOf(activeSection);
-    
-    // Only auto-scroll if current section is in autoScrollSections
-    if (!autoScrollSections.includes(activeSection)) return;
-    
-    // Don't auto-scroll from the last section
-    if (currentIndex === allSections.length - 1) return;
-
-    const currentSection = document.getElementById(activeSection);
-    if (!currentSection) return;
-
-    const rect = currentSection.getBoundingClientRect();
-    const sectionHeight = rect.height;
-    const scrollPercentage = (window.innerHeight - rect.top) / sectionHeight;
-
-    // If user has scrolled 50% through the current section
-    if (scrollPercentage >= 0.5) {
-      const nextIndex = currentIndex + 1;
-      const nextSection = document.getElementById(allSections[nextIndex]);
-      
-      if (nextSection) {
-        isScrolling.current = true;
-        nextSection.scrollIntoView({ behavior: "smooth" });
-        
-        // Reset scrolling flag after animation completes
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 1000);
-      }
-    }
-  };
-
-  // Scroll handling with auto-scroll feature
+  // Scroll handling without auto-scroll feature
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -116,11 +78,6 @@ const Index: React.FC = () => {
         
         if (currentSection) {
           setActiveSection(currentSection);
-        }
-
-        // Check for auto-scroll only if user is not currently programmatically scrolling
-        if (!isScrolling.current) {
-          checkAutoScroll();
         }
       }, 100);
     };
