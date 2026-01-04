@@ -7,31 +7,31 @@ const SkillsSection: React.FC = () => {
     const skills = [
         {
             category: "Frontend",
-            icon: <Globe className="w-6 h-6 text-cyan-400" />,
+            icon: <Globe className="w-6 h-6 text-white" />,
             items: ["React", "Tailwind CSS", "HTML5/CSS3", "Bootstrap", "JavaScript"],
             color: "from-cyan-400 to-blue-500"
         },
         {
             category: "Programming",
-            icon: <Code className="w-6 h-6 text-green-400" />,
+            icon: <Code className="w-6 h-6 text-white" />,
             items: ["JavaScript", "Java", "C++", "C"],
             color: "from-green-400 to-emerald-500"
         },
         {
             category: "Design",
-            icon: <Palette className="w-6 h-6 text-purple-400" />,
+            icon: <Palette className="w-6 h-6 text-white" />,
             items: ["Adobe Photoshop", "CoralDraw"],
             color: "from-purple-400 to-pink-500"
         },
         {
             category: "Tools",
-            icon: <Laptop className="w-6 h-6 text-orange-400" />,
+            icon: <Laptop className="w-6 h-6 text-white" />,
             items: ["Git", "VS Code", "GitHub", "Postman"],
             color: "from-orange-400 to-red-500"
         },
         {
             category: "Operating Systems",
-            icon: <PenTool className="w-6 h-6 text-yellow-400" />,
+            icon: <PenTool className="w-6 h-6 text-black" />,
             items: ["Windows", "Linux", "Ubuntu"],
             color: "from-yellow-400 to-amber-500"
         },
